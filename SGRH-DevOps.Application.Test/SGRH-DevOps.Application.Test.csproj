@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>SGRH_DevOps.Application.Test</RootNamespace>
+    <RootNamespace>SGRH-DevOps.Application.Test</RootNamespace>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

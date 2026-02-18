@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>SGRH_DevOps.Infrastructure.Shared</RootNamespace>
+    <RootNamespace>SGRH-DevOps.Infrastructure.Shared</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SGHR-DevOps\SGHR-DevOps.Core.Domain.csproj" />
+    <ProjectReference Include="..\SGHR-DevOps.Core.Domain\SGHR-DevOps.Core.Domain.csproj" />
     <ProjectReference Include="..\SGRH-DevOps.Core.Application\SGRH-DevOps.Core.Application.csproj" />
   </ItemGroup>
 

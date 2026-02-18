@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>SGRH_DevOps.Persistence.Test</RootNamespace>
+    <RootNamespace>SGRH-DevOps.Persistence.Test</RootNamespace>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
