@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>SGRH-DevOps.Infrastructure.Persistence</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SGHR-DevOps.Core.Domain\SGHR-DevOps.Core.Domain.csproj" />
+    <ProjectReference Include="..\SGRH-DevOps.Core.Application\SGRH-DevOps.Core.Application.csproj" />
+  </ItemGroup>
+
+</Project>
