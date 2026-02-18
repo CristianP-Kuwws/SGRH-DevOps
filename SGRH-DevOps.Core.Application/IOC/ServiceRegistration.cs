@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SGRH_DevOps.Core.Application.IOC
 {
-    internal class ServicesRegistration
+    internal class ServiceRegistration
     {
     }
 }

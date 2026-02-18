@@ -1,6 +1,6 @@
-﻿namespace SGRH_DevOps.Core.Application
+﻿namespace SGRH_DevOps.Core.Application.Interfaces.Base
 {
-    public class Class1
+    public class IGenericService
     {
 
     }
