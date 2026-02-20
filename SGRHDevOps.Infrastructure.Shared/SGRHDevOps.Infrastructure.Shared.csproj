@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.15.0" />
+    <PackageReference Include="MimeKit" Version="4.15.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SGRHDevOps.Core.Domain\SGRHDevOps.Core.Domain.csproj" />
     <ProjectReference Include="..\SGRHDevOps.Core.Application\SGRHDevOps.Core.Application.csproj" />
   </ItemGroup>
