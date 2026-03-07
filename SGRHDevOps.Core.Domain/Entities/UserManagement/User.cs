@@ -1,6 +1,8 @@
-﻿namespace SGRHDevOps.Core.Domain.Common.Base
+﻿using SGRHDevOps.Core.Domain.Common.Base;
+
+namespace SGRHDevOps.Core.Domain.Entities.UserManagement
 {
-    public abstract class Person : AuditEntity
+    public class User : AuditEntity
     {
         public int UserId { get; set; }
         public string FirstName { get; set; } = null!;
@@ -10,6 +12,5 @@
         public int RoleId { get; set; }
         public string? Phone { get; set; }
         public string? Address { get; set; }
-
     }
 }
