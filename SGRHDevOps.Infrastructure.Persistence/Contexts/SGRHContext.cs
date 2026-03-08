@@ -25,6 +25,8 @@ namespace SGRHDevOps.Infrastructure.Persistence.Contexts
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            modelBuilder.Entity<RoomCategory>().HasKey(x => x.CategoryId);
+
         }
 
     }
