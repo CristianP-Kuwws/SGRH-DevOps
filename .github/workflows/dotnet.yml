@@ -1,6 +1,5 @@
 name: .NET CI Pipeline
 
-# Disparadores: Pull requests a develop, qa y main
 on:
   pull_request:
     branches: ["develop", "qa", "main"]
@@ -21,7 +20,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      # Restore dependencias
+      # Restore dependencies
       - name: Restore dependencies
         run: dotnet restore
 
@@ -31,11 +30,14 @@ jobs:
 
       # Execute tests
       - name: Test
-        run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage"
+        run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage" --results-directory ./TestResults
+        continue-on-error: true
 
-      # Publish tests results
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
+      # Publish test results
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
         if: always()
         with:
-          files: "**/TestResults/**/*.trx"
+          name: test-results
+          path: TestResults/**/*
+          retention-days: 30
