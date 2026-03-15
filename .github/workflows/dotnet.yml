@@ -1,0 +1,41 @@
+name: .NET CI Pipeline
+
+# Disparadores: Pull requests a develop, qa y main
+on:
+  pull_request:
+    branches: ["develop", "qa", "main"]
+  push:
+    branches: ["develop", "qa", "main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Code Checkout
+      - uses: actions/checkout@v4
+
+      # .NET Setup
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Restore dependencias
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Compile Project
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      # Execute tests
+      - name: Test
+        run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage"
+
+      # Publish tests results
+      - name: Publish test results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: "**/TestResults/**/*.trx"
