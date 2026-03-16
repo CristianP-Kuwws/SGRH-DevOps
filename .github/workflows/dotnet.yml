@@ -31,7 +31,6 @@ jobs:
       # Execute tests
       - name: Test
         run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage" --results-directory ./TestResults
-        continue-on-error: true
 
       # Publish test results
       - name: Upload test results
