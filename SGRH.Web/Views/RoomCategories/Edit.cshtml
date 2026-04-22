@@ -1,0 +1,49 @@
+@model SGRH.Web.Models.RoomCategoryViewModel
+
+@{
+    ViewData["Title"] = "Editar Room Category";
+}
+
+<h1 class="h2 mb-3">Editar room category</h1>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input asp-for="CategoryId" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="MaxCapacity" class="form-label"></label>
+                <input asp-for="MaxCapacity" class="form-control" />
+                <span asp-validation-for="MaxCapacity" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Amenities" class="form-label"></label>
+                <textarea asp-for="Amenities" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Amenities" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
