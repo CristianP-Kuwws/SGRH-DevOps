@@ -27,20 +27,7 @@ namespace SGRHDevOps.Infrastructure.Persistence.IOC
             }
             else
             {
-                var connectionString = config.GetValue<string>("ConnectionStrings:DefaultConnection");
-
-                services.AddDbContext<SGRHContext>(
-                    (serviceProvider, options) =>
-                    {
-                        options.EnableSensitiveDataLogging();
-                        options.UseNpgsql(
-                             connectionString,
-                             options => options.MigrationsAssembly(typeof(SGRHContext).Assembly.FullName)
-                        );
-                    },
-                    contextLifetime: ServiceLifetime.Scoped,
-                    optionsLifetime: ServiceLifetime.Scoped
-                );
+                throw new InvalidOperationException("La configuracion actual solo admite UseInMemoryDatabase=true para este entorno.");
             }
             #endregion
 

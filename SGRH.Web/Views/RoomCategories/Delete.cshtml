@@ -1,0 +1,35 @@
+@model SGRH.Web.Models.RoomCategoryViewModel
+
+@{
+    ViewData["Title"] = "Eliminar Room Category";
+}
+
+<h1 class="h2 mb-3">Eliminar room category</h1>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <p class="mb-4">Confirma si deseas eliminar esta categoria.</p>
+
+        <dl class="row">
+            <dt class="col-sm-3">Nombre</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Descripcion</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+
+            <dt class="col-sm-3">Capacidad maxima</dt>
+            <dd class="col-sm-9">@Model.MaxCapacity</dd>
+
+            <dt class="col-sm-3">Amenidades</dt>
+            <dd class="col-sm-9">@Model.Amenities</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="CategoryId" />
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
