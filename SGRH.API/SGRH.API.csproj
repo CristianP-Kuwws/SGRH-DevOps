@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SGRHDevOps.Core.Application\SGRHDevOps.Core.Application.csproj" />
     <ProjectReference Include="..\SGRHDevOps.Infrastructure.Persistence\SGRHDevOps.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\SGRHDevOps.Infrastructure.Shared\SGRHDevOps.Infrastructure.Shared.csproj" />
   </ItemGroup>
 
 </Project>
