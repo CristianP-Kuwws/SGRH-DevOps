@@ -17,7 +17,6 @@ namespace SGRHDevOps.Infrastructure.Persistence.IOC
     {
         public static void AddPersistenceLayerIOC(this IServiceCollection services, IConfiguration config)
         {
-            #region Contexts
             if (config.GetValue<bool>("UseInMemoryDatabase"))
             {
                 services.AddDbContext<SGRHContext>(options =>
@@ -29,10 +28,7 @@ namespace SGRHDevOps.Infrastructure.Persistence.IOC
             {
                 throw new InvalidOperationException("La configuracion actual solo admite UseInMemoryDatabase=true para este entorno.");
             }
-            #endregion
 
-
-            #region Repositories
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IFloorRepository, FloorRepository>();
@@ -43,9 +39,6 @@ namespace SGRHDevOps.Infrastructure.Persistence.IOC
             services.AddScoped<IReservationRepository, ReservationRepository>();
             services.AddScoped<IReservationServiceRepository, ReservationServiceRepository>();
             services.AddScoped<IServiceRepository, ServiceRepository>();
-            #endregion
-              
-
         }
     }
 }

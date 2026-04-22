@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -20,14 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRHDevOps.Infrastructure.Shared", "SGRHDevOps.Infrastructure.Shared\SGRHDevOps.Infrastructure.Shared.csproj", "{CAA1A227-0B96-46EB-B249-A59BD258D37D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{B69C7477-0FF1-49B6-BF20-34E301189B95}"
-	ProjectSection(SolutionItems) = preProject
-		Class2.cs = Class2.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{F8CFE399-DB83-4512-9421-6707D8B5774D}"
-	ProjectSection(SolutionItems) = preProject
-		Class1.cs = Class1.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{29926A53-8B55-4263-BCF9-E205C29F8174}"
 EndProject
@@ -35,7 +28,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRH.API", "SGRH.API\SGRH.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRH.Web", "SGRH.Web\SGRH.Web.csproj", "{F6722F68-E5D6-4CB6-B97A-DD40C1E7C26B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRHDevops.Unit.Tests", "SGRHDevops.Unit.Tests\SGRHDevops.Unit.Tests.csproj", "{66522D4E-2A28-442C-A724-07AF1001F712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRHDevOps.Unit.Tests", "SGRHDevops.Unit.Tests\SGRHDevOps.Unit.Tests.csproj", "{7899A42E-62AE-4C5B-BCBE-32F5E9711204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRHDevOps.Integration.Tests", "SGRHDevOps.Integration.Tests\SGRHDevOps.Integration.Tests.csproj", "{A679401C-190C-4CE4-980F-681ED19A2E24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,10 +62,14 @@ Global
 		{F6722F68-E5D6-4CB6-B97A-DD40C1E7C26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6722F68-E5D6-4CB6-B97A-DD40C1E7C26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6722F68-E5D6-4CB6-B97A-DD40C1E7C26B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66522D4E-2A28-442C-A724-07AF1001F712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66522D4E-2A28-442C-A724-07AF1001F712}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66522D4E-2A28-442C-A724-07AF1001F712}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66522D4E-2A28-442C-A724-07AF1001F712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7899A42E-62AE-4C5B-BCBE-32F5E9711204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7899A42E-62AE-4C5B-BCBE-32F5E9711204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7899A42E-62AE-4C5B-BCBE-32F5E9711204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7899A42E-62AE-4C5B-BCBE-32F5E9711204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A679401C-190C-4CE4-980F-681ED19A2E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A679401C-190C-4CE4-980F-681ED19A2E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A679401C-190C-4CE4-980F-681ED19A2E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A679401C-190C-4CE4-980F-681ED19A2E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,7 +87,8 @@ Global
 		{29926A53-8B55-4263-BCF9-E205C29F8174} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F622C628-0788-4F2A-9870-A137C59402C9} = {F8CFE399-DB83-4512-9421-6707D8B5774D}
 		{F6722F68-E5D6-4CB6-B97A-DD40C1E7C26B} = {B69C7477-0FF1-49B6-BF20-34E301189B95}
-		{66522D4E-2A28-442C-A724-07AF1001F712} = {29926A53-8B55-4263-BCF9-E205C29F8174}
+		{7899A42E-62AE-4C5B-BCBE-32F5E9711204} = {29926A53-8B55-4263-BCF9-E205C29F8174}
+		{A679401C-190C-4CE4-980F-681ED19A2E24} = {29926A53-8B55-4263-BCF9-E205C29F8174}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DF26775-65E9-4F2B-B619-859EE0C43A23}

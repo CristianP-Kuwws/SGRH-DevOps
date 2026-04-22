@@ -7,9 +7,9 @@ namespace SGRHDevOps.Core.Domain.Entities.Hotel
     {
         [Key]
         public int CategoryId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public int MaxCapacity { get; set; }
-        public string Amenities { get; set; }
+        public string Amenities { get; set; } = string.Empty;
     }
 }

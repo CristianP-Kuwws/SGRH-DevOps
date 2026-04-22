@@ -1,0 +1,43 @@
+name: .NET CI Pipeline
+
+on:
+  pull_request:
+    branches: ["develop", "qa", "main"]
+  push:
+    branches: ["develop", "qa", "main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Code Checkout
+      - uses: actions/checkout@v4
+
+      # .NET Setup
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Compile Project
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      # Execute tests
+      - name: Test
+        run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage" --results-directory ./TestResults
+        continue-on-error: true
+
+      # Publish test results
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: TestResults/**/*
+          retention-days: 30
