@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row g-4 py-4">
+    <div class="col-lg-7">
+        <div class="p-4 p-lg-5 bg-light rounded-4 shadow-sm h-100">
+            <span class="badge bg-dark-subtle text-dark mb-3">Administracion Hotelera</span>
+            <h1 class="display-5 fw-semibold">Gestion de floors y room categories desde MVC</h1>
+            <p class="lead text-muted">
+                Este modulo web consume la API de SGRH y permite consultar, crear, editar y eliminar pisos
+                y categorias de habitacion desde una interfaz MVC.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+                <a class="btn btn-primary btn-lg" asp-controller="Floors" asp-action="Index">Ver Floors</a>
+                <a class="btn btn-outline-secondary btn-lg" asp-controller="RoomCategories" asp-action="Index">Ver Room Categories</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-4">
+                <h2 class="h4">Estado esperado</h2>
+                <p class="text-muted mb-3">
+                    La API se inicializa con datos en memoria para que el flujo pueda validarse sin depender de una base externa.
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0">CRUD de `Floor` contra `/api/Floor`</li>
+                    <li class="list-group-item px-0">CRUD de `RoomCategory` contra `/api/RoomCategories`</li>
+                    <li class="list-group-item px-0">Interfaz MVC en `SGRH.Web` consumiendo la API por `HttpClient`</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -228,13 +228,13 @@ namespace SGRHDevOps.Unit.Tests.Services.Hotel
         {
             // Arrange
             var service = CreateService();
-            var dto = new RoomDto { RoomNumber = "101", CategoryId = 1, FloorId = 1, Status = "available" };
+            var dto = new RoomDto { RoomNumber = "12345678901", CategoryId = 1, FloorId = 1, Status = "available" };
 
             // Act
             var result = await service.AddAsync(dto);
 
             // Assert
-            Assert.False(result.IsSuccess); // Fallará porque el dto es válido
+            Assert.False(result.IsSuccess);
             Assert.Equal("Room number must not exceed 10 characters.", result.Message);
         }
     }

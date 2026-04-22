@@ -1,0 +1,32 @@
+@model SGRH.Web.Models.FloorViewModel
+
+@{
+    ViewData["Title"] = "Eliminar Floor";
+}
+
+<h1 class="h2 mb-3">Eliminar floor</h1>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <p class="mb-4">Confirma si deseas eliminar este floor.</p>
+
+        <dl class="row">
+            <dt class="col-sm-3">Numero</dt>
+            <dd class="col-sm-9">@Model.FloorNumber</dd>
+
+            <dt class="col-sm-3">Descripcion</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@Model.Status</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="FloorId" />
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

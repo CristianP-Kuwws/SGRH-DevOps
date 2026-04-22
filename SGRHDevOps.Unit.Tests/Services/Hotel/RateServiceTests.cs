@@ -219,8 +219,8 @@ namespace SGRHDevOps.Unit.Tests.Services.Hotel
             var result = await service.AddAsync(dto);
 
             // Assert
-            Assert.True(result.IsSuccess); 
-            Assert.Equal(100.00m, result.Data!.NightPrice);
+            Assert.False(result.IsSuccess);
+            Assert.Equal("NightPrice must be greater than zero.", result.Message);
         }
     }
 }
