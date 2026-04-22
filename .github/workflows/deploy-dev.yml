@@ -3,7 +3,7 @@ name: Build and deploy ASP.Net Core app to an Azure Web App
 env:
   AZURE_WEBAPP_NAME: SGRH-Dev   
   AZURE_WEBAPP_PACKAGE_PATH: '.'      
-  DOTNET_VERSION: '9'                 
+  DOTNET_VERSION: '8'                 
   DOTNET_WEBAPP_PATH: ./SGRH.Web/SGRH.Web.csproj
 
 on:
