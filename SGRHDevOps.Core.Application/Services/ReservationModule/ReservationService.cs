@@ -1,11 +1,12 @@
 ﻿using SGRHDevOps.Core.Application.Dtos.ReservationModule;
+using SGRHDevOps.Core.Application.Interfaces.ReservationModule;
 using SGRHDevOps.Core.Domain.Common.Base;
 using SGRHDevOps.Core.Domain.Entities.ReservationModule;
 using SGRHDevOps.Core.Domain.Interfaces.ReservationModule;
 
 namespace SGRHDevOps.Core.Application.Services.ReservationModule
 {
-    public class ReservationService
+    public class ReservationService : IReservationService
     {
         private readonly IReservationRepository _reservationRepository;
 
@@ -34,7 +35,7 @@ namespace SGRHDevOps.Core.Application.Services.ReservationModule
                 GuestCount = r.GuestCount,
                 PaymentAmount = r.PaymentAmount,
                 RoomId = r.RoomId,
-                Status = r.Status
+                Status = r.Status,
             }).ToList();
 
             return OperationResult<List<ReservationDto>>.Success(result.Message, reservationsDtoList);

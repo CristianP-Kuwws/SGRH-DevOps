@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
+using SGRHDevOps.Core.Application.Interfaces.ReservationModule;
+using SGRHDevOps.Core.Application.Services.ReservationModule;
+using System.Reflection;
 
 namespace SGRHDevOps.Core.Application.IOC
 {
-    internal class ServiceRegistration
+    public static class ServiceRegistration
     {
+        public static void AddApplicationLayerIOC(this IServiceCollection services)
+        {
+            #region Configurations
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            #endregion
+
+            #region Services
+            services.AddScoped<IReservationService, ReservationService>();
+            #endregion
+        }
     }
 }
